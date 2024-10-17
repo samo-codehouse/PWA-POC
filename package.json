@@ -29,7 +29,8 @@
         "dev-server": "vite --open",
         "dev-task": "vite",
         "start": "npm run dev",
-        "start-remote": "vite --host"
+        "start-remote": "vite --host",
+        "test": "npx http-server ./html -a localhost -p 8001"
     },
     "version": "0.0.1"
 }
