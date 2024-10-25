@@ -3,39 +3,97 @@
 <html lang="en">
 
     <head>
-      <meta charset="utf-8" />
-      <title>pwa-poc</title>
-      <meta name="description" content="This is a pwa-poc app" />
-      <!-- PWA meta tags -->
-      <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
-      <meta name="mobile-web-app-capable" content="yes">
-      <meta name="apple-mobile-web-app-title" content="pwa-poc" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-      <link rel="icon" href="/assets/icons/icon_24.png" type="image/png" />
-      <link rel="manifest" href="manifest.json" />
+        <meta charset="utf-8" />
+        <title>PWA Home</title>
+        <meta name="description" content="PWA Home" />
+        <!-- PWA meta tags -->
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+        <link href="/manifest.json" rel="manifest" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="pwa-poc" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="icon" href="/assets/icons/icon_24.png" type="image/png" />
+        <!-- css reset -->
+        <style>
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+            * {
+                margin: 0;
+            }
+            html {
+                font-size: 16px;
+            }
+            body {
+                line-height: 1.5;
+                -webkit-font-smoothing: antialiased;
+            }
+            img, picture, video, canvas, svg {
+                display: block;
+                max-width: 100%;
+            }
+            input, button, textarea, select {
+                font: inherit;
+            }
+            p, h1, h2, h3, h4, h5, h6 {
+                overflow-wrap: break-word;
+            }
+            p {
+                text-wrap: pretty;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                text-wrap: balance;
+            }
+            #root, #__next {
+                isolation: isolate;
+            }
+        </style>
+        <!-- styles -->
+        <style>
+            body {
+                background-color: #888;
+                color: #000;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Liberation Sans', sans-serif;
+                font-size: 1rem;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+            a:hover, a:focus, a:active {
+                text-decoration: none;
+            }
+        </style>
     </head>
 
     <body>
-        <h1>home page</h1>
-        <p><a href="/test.html">internal link</a></p>
-        <p><a href="/test/test.html">internal link out of scope</a></p>
-        <p><a href="http://www.google.com.au">external link</a></p>
-        <p><a href="http://www.google.com.au" target="_blank">external link target _blank</a></p>
+        <h1>Home Page</h1>
+        <ul>
+            <li><a href="/test.html">internal link</a></li>
+            <li><a href="http://www.google.com.au">external link</a></li>
+            <li><a href="http://www.google.com.au" target="_blank">external link target _blank</a></li>
+        </ul>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                .then(registration => {
-                    console.log('Service Worker registered with scope: ', registration.scope);
-                }).catch(error => {
-                    console.error('Service Worker registration failed: ', error);
+        <!-- service worker js -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.info('Service Worker registered with scope: ', registration.scope);
+                    }).catch(error => {
+                        console.error('Service Worker registration failed: ', error);
+                    });
                 });
-            });
-        }
-    </script>
-</body>
+            }
+        </script>
+    </body>
 
 </html>

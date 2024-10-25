@@ -1,18 +1,7 @@
 {
-  "background_color": "#E1477E",
-  "categories": [
-    "social"
-  ],
-  "description": "This is a pwa-poc app",
+  "background_color": "#FFFFFF",
+  "description": "explain what the application does",
   "display": "standalone",
-  "display_override": [
-    "window-controls-overlay"
-  ],
-  "features": [
-    "Cross Platform",
-    "fast",
-    "simple"
-  ],
   "icons": [
     {
       "sizes": "512x512",
@@ -35,14 +24,8 @@
       "type": "image/png"
     }
   ],
-  "id": "/",
-  "launch_handler": {
-    "client_mode": "focus-existing"
-  },
-  "name": "pwa-poc",
-  "orientation": "any",
-  "prefer_related_applications": false,
-  "related_applications": [],
+  "name": "full name of your web application",
+  "orientation": "portrait-primary",
   "scope": "/",
   "screenshots": [
     {
@@ -51,43 +34,7 @@
       "type": "image/png"
     }
   ],
-  "short_name": "starter",
-  "shortcuts": [
-    {
-      "description": "Open the about page",
-      "icons": [
-        {
-          "sizes": "192x192",
-          "src": "assets/icons/192x192.png"
-        }
-      ],
-      "name": "Open About",
-      "short_name": "About",
-      "url": "/about"
-    }
-  ],
+  "short_name": "short name for your web application",
   "start_url": "/",
-  "theme_color": "#E1477E",
-  "widgets": [
-    {
-      "data": "widget/data.json",
-      "description": "A simple widget example from pwa-starter.",
-      "icons": [
-        {
-          "sizes": "48x48",
-          "src": "assets/icons/48x48.png"
-        }
-      ],
-      "ms_ac_template": "widget/ac.json",
-      "name": "Starter Widget",
-      "screenshots": [
-        {
-          "label": "Widget screenshot",
-          "sizes": "500x500",
-          "src": "assets/screenshots/widget-screen.png"
-        }
-      ],
-      "tag": "starterWidget"
-    }
-  ]
+  "theme_color": "#064d42"
 }
