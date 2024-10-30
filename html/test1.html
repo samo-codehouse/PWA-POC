@@ -4,8 +4,8 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>PWA Home</title>
-        <meta name="description" content="PWA Home" />
+        <title>PWA Test 1</title>
+        <meta name="description" content="PWA Test 1" />
         <!-- PWA meta tags -->
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
         <link href="/manifest.json" rel="manifest" />
@@ -74,27 +74,10 @@
     </head>
 
     <body>
-        <h1>Home Page</h1>
+        <h1>Test Page 1</h1>
         <ul>
-            <li><a href="/test1.html">internal link 1</a></li>
-            <li><a href="/test2.html">internal link 2</a></li>
-            <li><a href="http://www.google.com.au">external link</a></li>
-            <li><a href="http://www.google.com.au" target="_blank">external link target _blank</a></li>
+            <li><a href="/index.html">home page link</a></li>
         </ul>
-
-        <!-- service worker js -->
-        <script>
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.info('Service Worker registered with scope: ', registration.scope);
-                    }).catch(error => {
-                        console.error('Service Worker registration failed: ', error);
-                    });
-                });
-            }
-        </script>
     </body>
 
 </html>

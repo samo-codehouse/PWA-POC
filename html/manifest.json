@@ -1,7 +1,8 @@
 {
   "background_color": "#FFFFFF",
-  "description": "explain what the application does",
+  "description": "description - explain what the application does",
   "display": "standalone",
+  "handle_links": "preferred",
   "icons": [
     {
       "sizes": "512x512",
@@ -24,7 +25,11 @@
       "type": "image/png"
     }
   ],
-  "name": "full name of your web application",
+  "id": "id - unique identifier",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "name": "name - full name of your web application",
   "orientation": "portrait-primary",
   "scope": "/",
   "screenshots": [
@@ -34,7 +39,7 @@
       "type": "image/png"
     }
   ],
-  "short_name": "short name for your web application",
+  "short_name": "short name - short name for your web application",
   "start_url": "/",
   "theme_color": "#064d42"
 }

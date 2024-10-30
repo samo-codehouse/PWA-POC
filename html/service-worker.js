@@ -1,42 +1,44 @@
-// https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/service-workers
-// The name of the cache your app uses.
-const cacheName = 'actewagl-pwa-cache';
-// The list of static files your app needs to start.
-// Note the offline page in this list.
-const cachedResources = [
-    '/offline.html'
-];
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-// install event
-self.addEventListener('install', event => {
-    // self.skipWaiting();
-    async function preCacheResources() {
-        // Open the app's cache.
-        const cache = await caches.open(cacheName);
-        // Cache all static resources.
-        cache.addAll(cachedResources);
+const appCache = 'actewagl-pwa-cache';
+
+const offlineFallback = '/offline.html';
+
+self.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+        self.skipWaiting();
     }
-    event.waitUntil(preCacheResources());
-    console.info('install event');
 });
 
-// fetch event
-self.addEventListener('fetch', event => {
-    async function navigateOrDisplayOfflinePage() {
+self.addEventListener('install', async (event) => {
+    event.waitUntil(
+        caches.open(appCache)
+        .then((cache) => cache.add(offlineFallback))
+    );
+});
+
+if (workbox.navigationPreload.isSupported()) {
+    workbox.navigationPreload.enable();
+}
+
+self.addEventListener('fetch', (event) => {
+    if (event.request.mode === 'navigate') {
+        event.respondWith((async () => {
         try {
-            // Try to load the page from the network.
+            const preloadResponse = await event.preloadResponse;
+
+            if (preloadResponse) {
+                return preloadResponse;
+            }
+
             const networkResponse = await fetch(event.request);
             return networkResponse;
         } catch (error) {
-            // The network call failed, the device is offline.
-            const cache = await caches.open(cacheName);
-            const cachedResponse = await cache.match('/offline.html');
+
+            const cache = await caches.open(appCache);
+            const cachedResponse = await cache.match(offlineFallback);
             return cachedResponse;
         }
+        })());
     }
-    if (event.request.mode === 'navigate') {
-        console.log(event.request.mode);
-        event.respondWith(navigateOrDisplayOfflinePage());
-    }
-    console.info('fetch event');
 });
