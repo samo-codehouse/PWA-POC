@@ -1,11 +1,12 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
-const appCache = 'actewagl-pwa-cache';
+// cache name should be updated with any major change to the cached items
+const appCache = 'actewagl-pwa-cache-v1';
 
 const offlineFallback = '/offline.html';
 
 self.addEventListener('message', (event) => {
-    if (event.data && event.data.type === 'SKIP_WAITING') {
+    if (event.data && event.data.type === 'skipWaiting') {
         self.skipWaiting();
     }
 });

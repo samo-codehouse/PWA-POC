@@ -9,11 +9,10 @@
         <!-- PWA meta tags -->
         <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
         <link href="/manifest.json" rel="manifest" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+        <meta name="theme-color" content="#ffffff" />
         <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-title" content="pwa-poc" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="PWA Home" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="icon" href="/assets/icons/icon_24.png" type="image/png" />
         <!-- css reset -->
         <style>
@@ -70,6 +69,15 @@
             a:hover, a:focus, a:active {
                 text-decoration: none;
             }
+            .standalone {
+                display: none;
+            }
+            @media (display-mode: standalone) {
+                .standalone {
+                    display: block;
+                    margin-top: 20px;
+                }
+            }
         </style>
     </head>
 
@@ -81,6 +89,7 @@
             <li><a href="http://www.google.com.au">external link</a></li>
             <li><a href="http://www.google.com.au" target="_blank">external link target _blank</a></li>
         </ul>
+        <p class="standalone">If you can read this then display standalone css styling works!</p>
 
         <!-- service worker js -->
         <script>
