@@ -1,5 +1,5 @@
 {
-  "background_color": "#FFFFFF",
+  "background_color": "#00AA13",
   "description": "description - explain what the application does",
   "display": "standalone",
   "handle_links": "preferred",
@@ -41,5 +41,5 @@
   ],
   "short_name": "short name - short name for your web application",
   "start_url": "/",
-  "theme_color": "#00AA13"
+  "theme_color": "#FFFFFF"
 }
