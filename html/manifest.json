@@ -1,6 +1,6 @@
 {
   "background_color": "#00AA13",
-  "description": "description - explain what the application does",
+  "description": "A proof-of-concept PWA site",
   "display": "standalone",
   "handle_links": "preferred",
   "icons": [
@@ -25,11 +25,11 @@
       "type": "image/png"
     }
   ],
-  "id": "id - unique identifier",
+  "id": "com.example.pwapoc",
   "launch_handler": {
     "client_mode": "focus-existing"
   },
-  "name": "name - full name of your web application",
+  "name": "PWA POC",
   "orientation": "portrait-primary",
   "scope": "/",
   "screenshots": [
@@ -39,7 +39,7 @@
       "type": "image/png"
     }
   ],
-  "short_name": "short name - short name for your web application",
+  "short_name": "PWAPOC",
   "start_url": "/",
   "theme_color": "#FFFFFF"
 }
