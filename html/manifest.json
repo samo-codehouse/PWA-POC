@@ -25,21 +25,21 @@
       "type": "image/png"
     }
   ],
-  "id": "com.example.pwapoc",
+  "id": "au.com.actewagl.retailpwa",
   "launch_handler": {
     "client_mode": "focus-existing"
   },
-  "name": "PWA POC",
+  "name": "My ActewAGL",
   "orientation": "portrait-primary",
   "scope": "/",
   "screenshots": [
     {
-      "sizes": "1617x1012",
-      "src": "assets/screenshots/screen.png",
+      "sizes": "750x938",
+      "src": "assets/screenshots/screenshot-1.png",
       "type": "image/png"
     }
   ],
-  "short_name": "PWAPOC",
+  "short_name": "My ActewAGL",
   "start_url": "/",
   "theme_color": "#FFFFFF"
 }
