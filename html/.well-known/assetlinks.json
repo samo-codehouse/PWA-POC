@@ -1,8 +1,14 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.example.pwapoc",
-        "sha256_cert_fingerprints": ["D8:9C:D3:E4:18:8A:2D:09:A5:C1:AB:18:75:5C:E5:EF:9A:36:91:41:27:19:FA:98:39:2B:50:77:4B:E3:9A:8C"]
-      }
-    }]
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.example.pwapoc",
+            "sha256_cert_fingerprints": [
+                "D8:9C:D3:E4:18:8A:2D:09:A5:C1:AB:18:75:5C:E5:EF:9A:36:91:41:27:19:FA:98:39:2B:50:77:4B:E3:9A:8C"
+            ]
+        }
+    }
+]

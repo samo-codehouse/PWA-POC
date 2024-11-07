@@ -1,27 +1,27 @@
 {
-  "background_color": "#00AA13",
+  "background_color": "#ffffff",
   "description": "A proof-of-concept PWA site",
   "display": "standalone",
   "handle_links": "preferred",
   "icons": [
     {
       "sizes": "512x512",
-      "src": "assets/icons/512x512.png",
+      "src": "/pwa/images/icons/512x512.png",
       "type": "image/png"
     },
     {
       "sizes": "192x192",
-      "src": "assets/icons/192x192.png",
+      "src": "/pwa/images/icons/192x192.png",
       "type": "image/png"
     },
     {
       "sizes": "48x48",
-      "src": "assets/icons/48x48.png",
+      "src": "/pwa/images/icons/48x48.png",
       "type": "image/png"
     },
     {
       "sizes": "24x24",
-      "src": "assets/icons/24x24.png",
+      "src": "/pwa/images/icons/24x24.png",
       "type": "image/png"
     }
   ],
@@ -35,11 +35,11 @@
   "screenshots": [
     {
       "sizes": "750x938",
-      "src": "assets/screenshots/screenshot-1.png",
+      "src": "/pwa/images/screenshots/screenshot-1.png",
       "type": "image/png"
     }
   ],
   "short_name": "My ActewAGL",
   "start_url": "/",
-  "theme_color": "#FFFFFF"
+  "theme_color": "#ffffff"
 }
