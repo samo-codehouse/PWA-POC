@@ -1,5 +1,5 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#f4f4f4",
   "description": "A proof-of-concept PWA site",
   "display": "standalone",
   "handle_links": "preferred",
@@ -41,5 +41,5 @@
   ],
   "short_name": "My ActewAGL",
   "start_url": "/",
-  "theme_color": "#ffffff"
+  "theme_color": "#f4f4f4"
 }
