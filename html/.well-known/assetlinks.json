@@ -1,8 +1,0 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "au.com.actewagl.retailpwa",
-        "sha256_cert_fingerprints": ["69:3A:A0:29:DE:11:EC:54:EF:2B:E5:F6:5C:2A:D4:B2:27:85:86:EB:51:60:E2:43:39:5B:A6:71:00:A9:11:A1"]
-      }
-    }]
